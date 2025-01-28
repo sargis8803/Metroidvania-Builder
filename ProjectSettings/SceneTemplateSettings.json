@@ -58,7 +58,11 @@
         },
         {
             "userAdded": false,
+<<<<<<< HEAD
+            "type": "UnityEngine.PhysicsMaterial",
+=======
             "type": "UnityEngine.PhysicMaterial",
+>>>>>>> 727a8b171bb1f5fd6727a4e6f133df3e71245fd3
             "defaultInstantiationMode": 0
         },
         {
