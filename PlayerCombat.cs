@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Placeholder for future player combat logic.
 public class PlayerCombat : MonoBehavior
 {
 	// Placeholder variables for combat attributes.
