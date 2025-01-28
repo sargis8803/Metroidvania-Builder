@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
+  tags: []
+=======
   tags:
   - Ground
   - Pickup
+>>>>>>> 727a8b171bb1f5fd6727a4e6f133df3e71245fd3
   layers:
   - Default
   - TransparentFX
