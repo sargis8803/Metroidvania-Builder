@@ -201,11 +201,7 @@ QualitySettings:
     skinWeights: 255
     textureQuality: 0
     anisotropicTextures: 2
-<<<<<<< HEAD
-    antiAliasing: 2
-=======
     antiAliasing: 0
->>>>>>> 727a8b171bb1f5fd6727a4e6f133df3e71245fd3
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
