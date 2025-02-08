@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c116c6b87ec575d4d8bf916cd246fc06
+guid: 7f010d400610fe84eacf4e6f9fafaf47
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 1
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -105,6 +106,7 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -126,13 +128,14 @@ ScriptedImporter:
     pivot: {x: 0.5263158, y: -0.21428573}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
       y: 4
       width: 19
       height: 14
-    spriteID: 67721f11ca7adee4ca94898eb875a3fe
+    spriteID: 0e9aa3e890829144688d2baed2a7b004
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,7 +147,7 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1431418047
+    guid: 1983401595
     name: Blaster
     layerFlags: 0
     layerType: 0
@@ -158,11 +161,24 @@ ScriptedImporter:
         y: 3
         width: 19
         height: 14
-      spriteId: 67721f11ca7adee4ca94898eb875a3fe
+      spriteId: 0e9aa3e890829144688d2baed2a7b004
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 20, y: 20}
+  previousTextureSize: {x: 32, y: 32}
