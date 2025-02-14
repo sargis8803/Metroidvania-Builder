@@ -4,25 +4,34 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject SettingsMenu;
-    public GameObject menu; //need to link these later to the actual scenes
+
+    //need to add display settings button functions: window and full-screen
+    /*other possible settings implementations for the future: 
+     volume controls
+     key binds 
+     gamepad support?
+     tbd 
+    */
+    
+    public void windowMode()
+    {
+        Screen.fullScreen = false;
+    }
+
+    public void fullScreen()
+    {
+        Screen.fullScreen = true;
+    }
 
      public void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (SettingsMenu.activeSelf)
-            {
-                closeSettings();
-            }
+            SceneManager.LoadSceneAsync(0);
         }
     }
 
-    public void closeSettings()
-    {
-        SettingsMenu.SetActive(false);
-        menu.SetActive(true);
-    }
+    
 
     //Opens Level Select Screen
     public void OpenLevels()
