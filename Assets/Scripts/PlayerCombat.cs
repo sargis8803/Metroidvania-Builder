@@ -20,25 +20,26 @@ public class PlayerCombat : MonoBehaviour
     // Called once per frame.
     void Update()
     {
-        // Checks if the attack button (Fire1, usually left mouse button) is pressed.
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0)) // Left Click.
         {
-            Attack();
+            animator.SetTrigger("Attack"); // Plays the Attack animation.
+            // Invoke(nameof(Attack), 0.2f); // Slight delay for animation sync.
         }
     }
 
     // Function to handle attacking mechanics.
     void Attack()
     {
-        // Trigger the attack animation.
-        animator.SetTrigger("Attack");
-
         // Detect all enemies within the attack range.
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        // Log out the number of enemies detected.
+        Debug.Log("Enemies hit: " + hitEnemies.Length);
 
         // Loops through detected enemies and apply damage.
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("Enemy hit: " + enemy.gameObject.name);
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }

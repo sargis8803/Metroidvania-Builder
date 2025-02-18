@@ -5,18 +5,20 @@ public class PlayerMovement : MonoBehaviour
     // Public variables for movement speed and jump force, which is adjustable in Unity.
     public float speed = 5f;
     public float jumpForce = 7f;
+    public int maxJumps = 2;
 
     // Reference to the Rigidbody2D component for the physics interactions.
     private Rigidbody2D rb;
 
     // Boolean to check if the player is on the ground.
-    private bool isGrounded;
+    private int jumpCount;
 
     // Called once when the script starts.
     void Start()
     {
         // Gets and stores the Rigidbody2D component attached to the player.
         rb = GetComponent<Rigidbody2D>();
+        jumpCount = maxJumps;
     }
 
     // Called once per frame.
@@ -28,11 +30,11 @@ public class PlayerMovement : MonoBehaviour
         // Apply movement by modifying the player's velocity.
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
-        // Checks if the jump button is pressed and the player is grounded.
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // Jumping (with W or Up Arrow).
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && jumpCount > 0)
         {
-            // Apply an upward force to make the player jump.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpCount--; // Reduce jump count when jumping.
         }
     }
 
@@ -42,17 +44,7 @@ public class PlayerMovement : MonoBehaviour
         // If the player collides with an object tagged as "Ground", they are considered grounded.
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
-        }
-    }
-
-    // Detects when the player leaves contact with an object.
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // If the player stops colliding with the ground, they are no longer grounded.
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
+            jumpCount = maxJumps;
         }
     }
 }
