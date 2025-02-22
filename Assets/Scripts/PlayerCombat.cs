@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class PlayerCombat : MonoBehaviour
 {
     // Reference to the Animator component for handling attack animations.
@@ -22,8 +21,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left Click.
         {
+            Debug.Log("Attack triggered!");
             animator.SetTrigger("Attack"); // Plays the Attack animation.
-            // Invoke(nameof(Attack), 0.2f); // Slight delay for animation sync.
         }
     }
 
