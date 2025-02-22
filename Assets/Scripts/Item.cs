@@ -4,6 +4,7 @@ public class Item : MonoBehaviour
 {
     [SerializeField] private string itemName;
     [SerializeField] private Sprite sprite;
+    [TextArea] [SerializeField] private string itemDescription;
 
     private GearManager gearManager;
 
@@ -17,7 +18,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            gearManager.AddItem(itemName, sprite);
+            gearManager.AddItem(itemName, sprite, itemDescription);
             Destroy(gameObject);
         }
     }
