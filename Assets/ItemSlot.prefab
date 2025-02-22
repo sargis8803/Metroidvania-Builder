@@ -94,6 +94,8 @@ MonoBehaviour:
   itemSprite: {fileID: 0}
   isFull: 0
   itemImage: {fileID: 4574538909644457604}
+  selectedShader: {fileID: 8272655477191612895}
+  isSelected: 0
 --- !u!1 &4942292268314683366
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8594123366546475939
 RectTransform:
   m_ObjectHideFlags: 0

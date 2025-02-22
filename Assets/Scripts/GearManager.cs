@@ -14,6 +14,7 @@ public class GearManager : MonoBehaviour
             Time.timeScale = 1;
             GearMenu.SetActive(false);
             isOpen = false;
+            DeselectAllSlots();
         }
         else if (Input.GetKeyDown(KeyCode.I) && !isOpen)
         {
@@ -23,16 +24,26 @@ public class GearManager : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, Sprite itemSprite)
+    public void AddItem(string itemName, Sprite itemSprite, string itemDescription)
     {
         Debug.Log("itemName = " + itemName + "itemSprite = " + itemSprite);
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, itemSprite);
+                itemSlot[i].AddItem(itemName, itemSprite, itemDescription);
                 return;
             }
+        }
+    }
+
+    public void DeselectAllSlots()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].descriptionBox.SetActive(false);
+            itemSlot[i].isSelected = false;
         }
     }
 }
