@@ -60,6 +60,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         selectedShader.SetActive(true);
         isSelected = true;
 
+        descriptionBox.GetComponent<RectTransform>().position = new Vector3((GetComponent<RectTransform>().position.x + 75), (GetComponent<RectTransform>().position.y - 125), (GetComponent<RectTransform>().position.z));
+
         descriptionBox.SetActive(true);
         //itemDescriptionName.text = itemName;
         itemDescriptionText.text = itemDescription;
