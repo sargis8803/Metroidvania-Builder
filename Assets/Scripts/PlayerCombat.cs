@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PlayerCombat : MonoBehaviour
 {
     // Reference to the Animator component for handling attack animations.
@@ -19,27 +20,27 @@ public class PlayerCombat : MonoBehaviour
     // Called once per frame.
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left Click.
+        // If the left mouse button is clicked, trigger an attack.
+        if (Input.GetMouseButtonDown(0)) 
         {
             Debug.Log("Attack triggered!");
             animator.SetTrigger("Attack"); // Plays the Attack animation.
         }
     }
 
-    // Function to handle attacking mechanics.
+     // Method that detects and damage enemies within the attack range.
     void Attack()
     {
-        // Detect all enemies within the attack range.
+        // Detects all enemies within the attack range.
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        // Log out the number of enemies detected.
         Debug.Log("Enemies hit: " + hitEnemies.Length);
 
         // Loops through detected enemies and apply damage.
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Enemy hit: " + enemy.gameObject.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // Calls the TakeDamge method in the Enemy script.
         }
     }
 
