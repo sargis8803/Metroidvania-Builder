@@ -17,33 +17,70 @@ public class PlayerCombat : MonoBehaviour
     // Damage value inflicted on enemies.
     public int attackDamage = 20;
 
+    public int maxHealth = 100;
+    private int currentHealth;
+    private bool isDead = false;
+
+     void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     // Called once per frame.
     void Update()
     {
-        // If the left mouse button is clicked, trigger an attack.
-        if (Input.GetMouseButtonDown(0)) 
+        if (isDead) return;
+
+        if (Input.GetMouseButtonDown(0)) // Left Click.
         {
             Debug.Log("Attack triggered!");
             animator.SetTrigger("Attack"); // Plays the Attack animation.
         }
     }
 
-    // Function to detect and damage enemies within the attack range.
+    // Function to handle attacking mechanics.
     void Attack()
     {
         // Detect all enemies within the attack range.
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        // Log out the number of enemies detected.
         Debug.Log("Enemies hit: " + hitEnemies.Length);
 
         // Loops through each detected enemy and applies damage.
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Enemy hit: " + enemy.gameObject.name);
-
-            // Calls the TakeDamage method in the Enemy script.
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (isDead) return;
+
+        currentHealth -= damage;
+        Debug.Log("Player took damage. Health left: " + currentHealth);
+
+        animator.SetTrigger("Hurt"); // Plays hurt animation.
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        Debug.Log("Player has died!");
+        animator.SetTrigger("Die"); // Plays death animation.
+
+        GetComponent<PlayerMovement>().enabled = false;
+        this.enabled = false;
+
     }
 
     // Visual representation of the attack range in Unity.
@@ -56,4 +93,12 @@ public class PlayerCombat : MonoBehaviour
         // Draws a wireframe sphere in the editor to show the attack range.
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    public bool IsDead()
+    {
+
+    return isDead;
+    
+    }
+    
 }
