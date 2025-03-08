@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Public variables for movement speed and jump force, and max jumps, which is adjustable in Unity.
+    // Public variables for movement speed, jump force, and max jumps, which is adjustable in Unity.
     public float speed = 5f;
-    
+
     public float jumpForce = 7f;
     
     public int maxJumps = 2;
@@ -20,10 +20,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Gets and stores the Rigidbody2D component attached to the player.
         rb = GetComponent<Rigidbody2D>();
-        jumpCount = maxJumps; // Initializes jump count.
+
+        // Initializes jump count to the maximum allowed jumps.
+        jumpCount = maxJumps;
     }
 
-    // Called once per frame.
+    // Called once per frame to handle player input.
     void Update()
     {
         // Gets the horizontal movement input (-1 for left, 1 for right).
@@ -35,7 +37,9 @@ public class PlayerMovement : MonoBehaviour
         // Checks for jump input (W key or Up Arrow key) and ensures the player has jumps remaining.
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && jumpCount > 0)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Upward force to make the player jump.
+            // Apply an upward force to make the player jump.
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
             jumpCount--; // Reduce jump count when jumping.
         }
     }
