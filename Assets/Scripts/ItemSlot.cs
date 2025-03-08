@@ -14,7 +14,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public bool isFull;
     [SerializeField] private Image itemImage;
     public TMP_Text itemDescriptionText;
-    //public TMP_Text itemDescriptionName;
+    public TMP_Text itemDescriptionName;
 
     public GameObject selectedShader;
     public bool isSelected;
@@ -62,9 +62,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         descriptionBox.GetComponent<RectTransform>().position = new Vector3((GetComponent<RectTransform>().position.x + 75), (GetComponent<RectTransform>().position.y - 125), (GetComponent<RectTransform>().position.z));
 
-        descriptionBox.SetActive(true);
-        //itemDescriptionName.text = itemName;
-        itemDescriptionText.text = itemDescription;
+        if (isFull)
+        {
+            descriptionBox.SetActive(true);
+            itemDescriptionName.text = itemName;
+            itemDescriptionText.text = itemDescription;
+        }
     }
 
     //Deselects an itemslot in the gear menu
