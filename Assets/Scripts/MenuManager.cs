@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
-    private bool isPauseMenuOpen = false;
-    [SerializeField] GameObject gearMenu;
-    private bool isGearMenuOpen = false;
+    [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public GameObject gearMenu;
 
     private void ToggleTime(bool isPaused)
     {
@@ -15,20 +13,20 @@ public class MenuManager : MonoBehaviour
     public void TogglePauseMenu()
     {
         //Closes GearMenu if it is open
-        if (isGearMenuOpen) { ToggleGearMenu(); }
+        if (gearMenu.activeSelf) { ToggleGearMenu(); }
 
-        isPauseMenuOpen = !isPauseMenuOpen;
-        pauseMenu.SetActive(isPauseMenuOpen);
-        ToggleTime(isPauseMenuOpen);
+        bool isPauseMenuOpen = pauseMenu.activeSelf;
+        pauseMenu.SetActive(!isPauseMenuOpen);
+        ToggleTime(!isPauseMenuOpen);
     }
 
     public void ToggleGearMenu()
     {
         //Does not allow GearMenu to open when PauseMenu is open
-        if (isPauseMenuOpen) { return; }
+        if (pauseMenu.activeSelf) { return; }
 
-        isGearMenuOpen = !isGearMenuOpen;
-        gearMenu.SetActive(isGearMenuOpen);
-        ToggleTime(isGearMenuOpen);
+        bool isGearMenuOpen = gearMenu.activeSelf;
+        gearMenu.SetActive(!isGearMenuOpen);
+        ToggleTime(!isGearMenuOpen);
     }
 }
