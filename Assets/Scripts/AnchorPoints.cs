@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-public class AnchorPoints
+public class AnchorPoints : MonoBehaviour
 {
     [SerializeField] private int heigh, width;
     [SerializeField] private GameObject anchor;//position?
