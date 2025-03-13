@@ -12,7 +12,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public Sprite itemSprite;
     public string itemDescription;
     public bool isFull;
-    [SerializeField] private Image itemImage;
+    [SerializeField] public Image itemImage;
     public TMP_Text itemDescriptionText;
     public TMP_Text itemDescriptionName;
 

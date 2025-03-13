@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private string itemName;
-    [SerializeField] private Sprite sprite;
-    [TextArea] [SerializeField] private string itemDescription;
+    [SerializeField] public string itemName;
+    [SerializeField] public Sprite sprite;
+    [TextArea] [SerializeField] public string itemDescription;
 
-    private GearManager gearManager;
+    public GearManager gearManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,12 +14,22 @@ public class Item : MonoBehaviour
         gearManager = GameObject.Find("GearCanvas").GetComponent<GearManager>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             gearManager.AddItem(itemName, sprite, itemDescription);
             Destroy(gameObject);
+        }
+    }
+
+    //Used for integration testing as unity is bad at simulating collisions in test framework.
+    public void TryAddItemToGear()
+    {
+        if (gearManager != null)
+        {
+            gearManager.AddItem(itemName, sprite, itemDescription);
+            DestroyImmediate(gameObject);
         }
     }
 }
