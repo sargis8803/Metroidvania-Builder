@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GearManager : MonoBehaviour
 {
-    [SerializeField] MenuManager menuManager;
+    [SerializeField] public MenuManager menuManager;
     public ItemSlot[] itemSlot;
 
     // Update is called once per frame
