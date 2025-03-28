@@ -55,7 +55,7 @@ public class ItemSlotTests
         Sprite testItemSprite = Sprite.Create(Texture2D.blackTexture, new Rect(0, 0, 3, 3), Vector2.zero);
         string testItemDescription = "Test Description, very descriptive and informative";
 
-        slot.AddItem(testItemName, testItemSprite, testItemDescription);
+        slot.AddItem(testItemName, testItemSprite, testItemDescription, GearManager.GearType.none);
 
         Assert.AreEqual(testItemName, slot.itemName, "Item name should be correctly assigned");
         Assert.AreEqual(testItemSprite, slot.itemSprite, "Item sprite should be correctly assigned");

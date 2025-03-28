@@ -8,6 +8,8 @@ public class Item : MonoBehaviour
 
     public GearManager gearManager;
 
+    public GearManager.GearType gearType;
+
     private bool isPlayerColliding = false;
 
     public GameObject tipBox;
@@ -22,7 +24,7 @@ public class Item : MonoBehaviour
     {
         if (isPlayerColliding && Input.GetKeyDown(KeyCode.F))
         {
-            gearManager.AddItem(itemName, sprite, itemDescription);
+            gearManager.AddItem(itemName, sprite, itemDescription, gearType);
             tipBox.SetActive(false);
             Destroy(gameObject);
         }
@@ -55,7 +57,7 @@ public class Item : MonoBehaviour
     {
         if (gearManager != null)
         {
-            gearManager.AddItem(itemName, sprite, itemDescription);
+            gearManager.AddItem(itemName, sprite, itemDescription, gearType);
             DestroyImmediate(gameObject);
         }
     }
