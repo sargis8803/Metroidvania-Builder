@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Public variables for movement speed, jump force, and max jumps, which is adjustable in Unity.
-    public float speed = 5f;
+    public static float speed = 5f;
 
-    public float jumpForce = 7f;
+    public static float jumpForce = 7f;
     
-    public int maxJumps = 2;
+    public static int maxJumps = 2;
 
     // Reference to the Rigidbody2D component for the physics interactions.
     private Rigidbody2D rb;
