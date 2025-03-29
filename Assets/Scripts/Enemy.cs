@@ -64,12 +64,22 @@ public class Enemy : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.75f); // Wait until the attack animation is done
 
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         if (player)
         {
-            player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            PlayerCombat playerCombat = player.GetComponent<PlayerCombat>();
+
+            // Only apply damage if the player is not blocking
+            if (playerCombat != null && !playerCombat.IsDead() && !playerCombat.isBlocking)  
+            {
+                playerCombat.TakeDamage(attackDamage);
+            }
+            else
+            {
+                Debug.Log("Enemy attack blocked!");
+            }
         }
     }
 

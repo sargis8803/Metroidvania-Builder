@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class PlayerCombat : MonoBehaviour
     public int maxAmmo = 10; // Maximum ammo count
     private int currentAmmo;
 
+    public bool isBlocking = false;  
+
+    public KeyCode blockKey = KeyCode.E;
+
+    public float blockDuration = 0.5f; 
+
+    private bool canBlock = true; 
+
      void Start()
     {
         currentHealth = maxHealth;
@@ -44,12 +53,25 @@ public class PlayerCombat : MonoBehaviour
     {
         if (isDead) return;
 
+        // Handle block input
+        if (Input.GetKey(blockKey) && canBlock)
+        {
+            if (!isBlocking) // Start blocking only if not already blocking.
+            {
+                StartCoroutine(Block());
+            }
+        }
+        else if (isBlocking) // Stop blocking if the key is released.
+        {
+            isBlocking = false;
+        }
+
         if (Input.GetMouseButtonDown(0)) // Left Click.
         {
             Debug.Log("Attack triggered!");
             PerformComboAttack();
         }
-        else if (Input.GetMouseButtonDown(1)) // Right Click for ranged attack
+        else if (Input.GetKeyDown(KeyCode.F))  
         {
 
         if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
@@ -58,6 +80,30 @@ public class PlayerCombat : MonoBehaviour
             lastRangedAttackTime = Time.time;
         }
     }
+}
+
+    private IEnumerator Block()
+    {
+        isBlocking = true;
+        animator.SetTrigger("Block"); // Trigger block animation.
+        animator.SetBool("IsBlocking", true); // Set IsBlocking to true for continuous blocking state.
+
+        // Prevent multiple blocks in quick succession.
+        canBlock = false;
+
+        // Loop while the player is holding the block key.
+        while (Input.GetKey(blockKey)) 
+        {
+            yield return null; // Wait for the next frame to check the key.
+        }
+
+        // When the player releases the block key, stop blocking.
+        animator.SetBool("IsBlocking", false); 
+
+        // Cooldown for blocking.
+        yield return new WaitForSeconds(1f);
+        canBlock = true;
+        isBlocking = false;
 }
 
     void RangedAttack()
@@ -72,7 +118,7 @@ public class PlayerCombat : MonoBehaviour
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.linearVelocity = transform.right * projectileSpeed; // Adjust based on player direction
 
-        animator.SetTrigger("RangedAttack"); // Trigger ranged attack animation
+      //  animator.SetTrigger("RangedAttack"); // Trigger ranged attack animation
 
         currentAmmo--; // Reduce ammo count
         Debug.Log("Ranged attack fired! Ammo left: " + currentAmmo);
@@ -127,6 +173,12 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isDead) return;
+
+        if (isBlocking)
+        {
+            damage = 0;  // Blocks the damage.
+            Debug.Log("Player blocked the attack!");
+        }
 
         currentHealth -= damage;
         Debug.Log("Player took damage. Health left: " + currentHealth);
