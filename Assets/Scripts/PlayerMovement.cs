@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // If the player collides with an object tagged as "Ground", they are considered grounded.
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("tPlat") || collision.gameObject.CompareTag("platform") || collision.gameObject.CompareTag("Square"))
         {
             jumpCount = maxJumps;
         }
