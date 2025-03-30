@@ -46,13 +46,15 @@ public class BuildMenu : MonoBehaviour
         if (index < 0 || index >= prefab.Length)
         {
             Debug.LogWarning("error index");
+            Debug.LogWarning(index);
             return;
         }
 
         GameObject newAsset = Instantiate(prefab[index], assetPlacement.position, Quaternion.identity);
-        newAsset.transform.SetParent(null, true);
+        newAsset.transform.SetParent(assetPlacement, true);
 
-       
+
+
         if (newAsset.GetComponent<Drag>() == null)//need to check for prefab validity, see if script exists 
         {
             newAsset.AddComponent<Drag>();

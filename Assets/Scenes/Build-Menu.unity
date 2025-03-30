@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetPlacement: {fileID: 1894541195}
-  assetPrefabs:
+  prefab:
   - {fileID: 7097460611873930130, guid: 8679180bf68f52443ad2aba34c91e25a, type: 3}
   - {fileID: 5517744372065055177, guid: 08259608fa14604438d5422500977e76, type: 3}
   - {fileID: 2976483198402084082, guid: 667dc10c32151934eb5fd708c920b581, type: 3}
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assetPlacement: {fileID: 1894541195}
-  assetPrefabs: []
+  prefab: []
   dropdown: {fileID: 203419318}
 --- !u!1 &982643585
 GameObject:
@@ -3248,9 +3248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e787bc9e6a1d542900a5c88ba4e1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 7
-  maxJumps: 2
 --- !u!1 &1840449000
 GameObject:
   m_ObjectHideFlags: 0
