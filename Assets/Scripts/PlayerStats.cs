@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     public float playerJumpForce;
     public int playerMaxJumps;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is created, test test
     void Start()
     {
         playerAtkDamage = 20;

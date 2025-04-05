@@ -21,7 +21,7 @@ public class EquipmentScriptable : ScriptableObject
         playerstats.playerMaxHealth += playerMaxHealth;
         playerstats.playerMaxJumps += playerMaxJumps;
         playerstats.playerAtkRange += playerAtkRange;
-        playerstats.playerSpeed += playerSpeed;
+        playerstats.playerWalkSpeed += playerSpeed;        
         playerstats.playerJumpForce += playerJumpForce;
     }
 
@@ -32,7 +32,7 @@ public class EquipmentScriptable : ScriptableObject
         playerstats.playerMaxHealth -= playerMaxHealth;
         playerstats.playerMaxJumps -= playerMaxJumps;
         playerstats.playerAtkRange -= playerAtkRange;
-        playerstats.playerSpeed -= playerSpeed;
+        playerstats.playerWalkSpeed -= playerSpeed;
         playerstats.playerJumpForce -= playerJumpForce;
     }
 
