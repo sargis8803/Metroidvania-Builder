@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Public variables for movement speed, jump force, and max jumps, which is adjustable in Unity.
-    public static float speed = 5f;
-
-    public static float jumpForce = 7f;
-    
-    public static int maxJumps = 2;
+    // Reference Player stats to get changeable attributes
+    private PlayerStats playerStats;
 
     // Reference to the Rigidbody2D component for the physics interactions.
     private Rigidbody2D rb;
@@ -15,14 +11,23 @@ public class PlayerMovement : MonoBehaviour
     // Private variable that tracks how many jumps the player has left.
     private int jumpCount;
 
+    // Boolean value to check if a player has jumped, used to prevent infinite jumps by unequipping and reequipping items.
+    private bool hasJumped;
+
     // Called once when the script starts.
     void Start()
     {
+        // Get the PlayerStats component attached to the same GameObject
+        playerStats = GameObject.Find("StatManager").GetComponent<PlayerStats>();
+
         // Gets and stores the Rigidbody2D component attached to the player.
         rb = GetComponent<Rigidbody2D>();
 
         // Initializes jump count to the maximum allowed jumps.
-        jumpCount = maxJumps;
+        jumpCount = playerStats.playerMaxJumps;
+
+        // Initializes hasJumped to false.
+        hasJumped = false;
     }
 
     // Called once per frame to handle player input.
@@ -32,15 +37,16 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
 
         // Apply movement by modifying the player's velocity.
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(moveInput * playerStats.playerSpeed, rb.linearVelocity.y);
 
         // Checks for jump input (W key or Up Arrow key) and ensures the player has jumps remaining.
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && jumpCount > 0)
         {
             // Apply an upward force to make the player jump.
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, playerStats.playerJumpForce);
 
             jumpCount--; // Reduce jump count when jumping.
+            hasJumped = true;
         }
     }
 
@@ -50,7 +56,14 @@ public class PlayerMovement : MonoBehaviour
         // If the player collides with an object tagged as "Ground", they are considered grounded.
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("tPlat") || collision.gameObject.CompareTag("platform") || collision.gameObject.CompareTag("Square"))
         {
-            jumpCount = maxJumps;
+            jumpCount = playerStats.playerMaxJumps;
+            hasJumped = false;
         }
+    }
+
+    // Updates jumpCount variable after equipping or unequipping an item that changes the value of playerMaxJumps
+    public void UpdateJumpCount()
+    {
+        if (!hasJumped) { jumpCount = playerStats.playerMaxJumps; }
     }
 }
