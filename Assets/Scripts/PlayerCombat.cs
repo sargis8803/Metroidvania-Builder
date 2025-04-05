@@ -2,22 +2,18 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
-{
+{   
+    // Reference Player stats to get changeable attributes
+    private PlayerStats playerStats;
+
     // Reference to the Animator component for handling attack animations.
     public Animator animator;
 
     // Reference to the attack point where the attack will be detected.
     public Transform attackPoint;
 
-    // Radius of the attack hitbox.
-    public float attackRange = 0.5f;
-
     // LayerMask to determine which objects should be detected as enemies.
     public LayerMask enemyLayers;
-
-    // Damage value inflicted on enemies.
-    public int attackDamage = 20;
-    public int maxHealth = 100;
 
     private int currentHealth;
     private bool isDead = false;
@@ -44,7 +40,10 @@ public class PlayerCombat : MonoBehaviour
 
      void Start()
     {
-        currentHealth = maxHealth;
+        // Get the PlayerStats component attached to the same GameObject
+        playerStats = GameObject.Find("StatManager").GetComponent<PlayerStats>();
+
+        currentHealth = playerStats.playerMaxHealth;
         currentAmmo = maxAmmo;
     }
 
@@ -71,13 +70,13 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Attack triggered!");
             PerformComboAttack();
         }
-        else if (Input.GetKeyDown(KeyCode.F))  
-        {
 
-        if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            RangedAttack();
-            lastRangedAttackTime = Time.time;
+            if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
+            {
+                animator.SetTrigger("Shooting"); // Triggers the shooting animation.
+                lastRangedAttackTime = Time.time;
         }
     }
 }
@@ -116,9 +115,12 @@ public class PlayerCombat : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = transform.right * projectileSpeed; // Adjust based on player direction
+        
+        // Determine shooting direction based on where the player is facing.
+        float direction = transform.localScale.x > 0 ? 1f : -1f;
 
-      //  animator.SetTrigger("RangedAttack"); // Trigger ranged attack animation
+        rb.linearVelocity = new Vector2(direction * projectileSpeed, 0f);
+
 
         currentAmmo--; // Reduce ammo count
         Debug.Log("Ranged attack fired! Ammo left: " + currentAmmo);
@@ -158,7 +160,7 @@ public class PlayerCombat : MonoBehaviour
     {
 
         // Detect all enemies within the attack range.
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, playerStats.playerAtkRange, enemyLayers);
 
         Debug.Log("Enemies hit: " + hitEnemies.Length);
 
@@ -166,7 +168,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Enemy hit: " + enemy.gameObject.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // Calls the TakeDamge method in the Enemy script.
+            enemy.GetComponent<Enemy>().TakeDamage(playerStats.playerAtkDamage); // Calls the TakeDamge method in the Enemy script.
         }
     }
 
@@ -212,7 +214,7 @@ public class PlayerCombat : MonoBehaviour
             return;
         
         // Draws a wireframe sphere in the editor to show the attack range.
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, playerStats.playerAtkRange);
     }
 
     public bool IsDead()
