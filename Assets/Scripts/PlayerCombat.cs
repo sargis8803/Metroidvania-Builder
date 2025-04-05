@@ -70,13 +70,13 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Attack triggered!");
             PerformComboAttack();
         }
-        else if (Input.GetKeyDown(KeyCode.F))  
-        {
 
-        if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            RangedAttack();
-            lastRangedAttackTime = Time.time;
+            if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
+            {
+                animator.SetTrigger("Shooting"); // Triggers the shooting animation.
+                lastRangedAttackTime = Time.time;
         }
     }
 }
@@ -115,9 +115,12 @@ public class PlayerCombat : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = transform.right * projectileSpeed; // Adjust based on player direction
+        
+        // Determine shooting direction based on where the player is facing.
+        float direction = transform.localScale.x > 0 ? 1f : -1f;
 
-      //  animator.SetTrigger("RangedAttack"); // Trigger ranged attack animation
+        rb.linearVelocity = new Vector2(direction * projectileSpeed, 0f);
+
 
         currentAmmo--; // Reduce ammo count
         Debug.Log("Ranged attack fired! Ammo left: " + currentAmmo);
