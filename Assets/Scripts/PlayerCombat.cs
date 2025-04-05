@@ -3,21 +3,17 @@ using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
+    // Reference Player stats to get changeable attributes
+    private PlayerStats playerStats;
+
     // Reference to the Animator component for handling attack animations.
     public Animator animator;
 
     // Reference to the attack point where the attack will be detected.
     public Transform attackPoint;
 
-    // Radius of the attack hitbox.
-    public float attackRange = 0.5f;
-
     // LayerMask to determine which objects should be detected as enemies.
     public LayerMask enemyLayers;
-
-    // Damage value inflicted on enemies.
-    public int attackDamage = 20;
-    public int maxHealth = 100;
 
     private int currentHealth;
     private bool isDead = false;
@@ -44,7 +40,10 @@ public class PlayerCombat : MonoBehaviour
 
      void Start()
     {
-        currentHealth = maxHealth;
+        // Get the PlayerStats component attached to the same GameObject
+        playerStats = GameObject.Find("StatManager").GetComponent<PlayerStats>();
+
+        currentHealth = playerStats.playerMaxHealth;
         currentAmmo = maxAmmo;
     }
 
@@ -158,7 +157,7 @@ public class PlayerCombat : MonoBehaviour
     {
 
         // Detect all enemies within the attack range.
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, playerStats.playerAtkRange, enemyLayers);
 
         Debug.Log("Enemies hit: " + hitEnemies.Length);
 
@@ -166,7 +165,7 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Enemy hit: " + enemy.gameObject.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage); // Calls the TakeDamge method in the Enemy script.
+            enemy.GetComponent<Enemy>().TakeDamage(playerStats.playerAtkDamage); // Calls the TakeDamge method in the Enemy script.
         }
     }
 
@@ -212,7 +211,7 @@ public class PlayerCombat : MonoBehaviour
             return;
         
         // Draws a wireframe sphere in the editor to show the attack range.
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, playerStats.playerAtkRange);
     }
 
     public bool IsDead()

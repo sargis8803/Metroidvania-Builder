@@ -24,9 +24,13 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
     public TMP_Text itemDescriptionName;
 
     private GearManager gearManager;
+    private EquipmentScriptablesLibrary equipmentLibrary;
+    private PlayerMovement playerMovement;
     private void Start()
     {
         gearManager = GameObject.Find("GearCanvas").GetComponent<GearManager>();
+        equipmentLibrary = GameObject.Find("GearCanvas").GetComponent<EquipmentScriptablesLibrary>();
+        playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     public void EquipGear(string itemName, Sprite itemSprite, string itemDescription)
@@ -44,12 +48,21 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
         this.itemDescription = itemDescription;
 
         //This is where we actually update the player's stats
+        for (int i = 0; i < equipmentLibrary.equipmentscriptable.Length; i++)
+        {
+            if (equipmentLibrary.equipmentscriptable[i].itemName == this.itemName) 
+            {
+                equipmentLibrary.equipmentscriptable[i].EquipItem();
+            }
+        }
         /*
         if (itemName == "Blaster")
         {
             PlayerMovement.maxJumps += 1;
         }
         */
+
+        playerMovement.UpdateJumpCount();
 
         isFull = true;
         descBox.SetActive(true);
@@ -103,6 +116,15 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
         this.itemSprite = null;
         slotImage.sprite = null;
         slotName.enabled = true;
+
+        for (int i = 0; i < equipmentLibrary.equipmentscriptable.Length; i++)
+        {
+            if (equipmentLibrary.equipmentscriptable[i].itemName == this.itemName)
+            {
+                equipmentLibrary.equipmentscriptable[i].UnEquipItem();
+            }
+        }
+        playerMovement.UpdateJumpCount();
 
         isFull = false;
     }
