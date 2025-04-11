@@ -17,6 +17,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public TMP_Text itemDescriptionText;
     public TMP_Text itemDescriptionName;
 
+    [SerializeField] private Sprite emptySprite;
+
     public GameObject selectedShader;
     public bool isSelected;
 
@@ -111,7 +113,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     private void EmptySlot()
     {
         gearManager.DeselectAllSlots();
-        itemImage.sprite = null;
+        itemImage.sprite = emptySprite;
         isFull = false;
     }
 }
