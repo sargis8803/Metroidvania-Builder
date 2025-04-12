@@ -12,6 +12,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Buildmenu()
+    {
+        SceneManager.LoadScene("Build-Menu");
+        Time.timeScale = 1;
+    }
+
      void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -19,4 +25,6 @@ public class PauseMenu : MonoBehaviour
             menuManager.TogglePauseMenu();
         }
     }
+
+
 }

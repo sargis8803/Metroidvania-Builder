@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class GearManager : MonoBehaviour
 {
-    [SerializeField] MenuManager menuManager;
+    [SerializeField] public MenuManager menuManager;
     public ItemSlot[] itemSlot;
+    public EquipSlot[] equipSlot;
 
     // Update is called once per frame
     void Update()
@@ -15,14 +16,14 @@ public class GearManager : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, Sprite itemSprite, string itemDescription)
+    public void AddItem(string itemName, Sprite itemSprite, string itemDescription, GearType gearType)
     {
         //Debug.Log("itemName = " + itemName + "itemSprite = " + itemSprite);
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, itemSprite, itemDescription);
+                itemSlot[i].AddItem(itemName, itemSprite, itemDescription, gearType);
                 return;
             }
         }
@@ -37,4 +38,12 @@ public class GearManager : MonoBehaviour
             itemSlot[i].isSelected = false;
         }
     }
+
+    public enum GearType
+    {
+        none,
+        head,
+        weapon,
+        body,
+    };
 }

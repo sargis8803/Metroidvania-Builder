@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
-{   
+{
     // Reference Player stats to get changeable attributes
     private PlayerStats playerStats;
 
