@@ -7,9 +7,10 @@ TagManager:
   - Ground
   - Pickup
   - Enemy
-  - Square
   - tPlat
   - platform
+  - Square
+
   layers:
   - Default
   - TransparentFX
