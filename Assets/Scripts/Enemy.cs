@@ -24,57 +24,85 @@ public class Enemy : MonoBehaviour
    // Reference to the Animator component for the enemy animations.
     private Animator animator;
 
+   // The point from where the enemy checks for players to attack.
     public Transform attackPoint;
 
+    // The player layer mask to detect collisions only with the player.
     public LayerMask playerLayer;
+
+    // Reference to the player transform to track position.
+    private Transform player;
 
     // Called when the script instance is being loaded.
     void Start() 
     {
         // Gets the Animator component attached to this GameObject for the animations.
         animator = GetComponent<Animator>(); 
+
+        
+        // Find the player in the scene by tag and store its transform.
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
+        // Face the player based on their position relative to the enemy.
+        if (player != null)
+        {
+            // Flips the enemy's sprite to face the player.
+            Vector3 scale = transform.localScale;
+            if (player.position.x < transform.position.x)
+                scale.x = Mathf.Abs(scale.x); // Faces left.
+            else
+                scale.x = -Mathf.Abs(scale.x); // Faces right.
+            transform.localScale = scale;
+        }
+
+         // Checks if enemy can attack.
         if (!isDead && canAttack && Time.time >= nextAttackTime)
         {
             TryAttackPlayer();
         }
     }
 
+    // Tries to detect and attack the player if its within range.
     void TryAttackPlayer()
     {
+        // Check if a player is within attack range using a circle overlap.
         Collider2D playerCollider = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
 
     if (playerCollider)
     {
+        // Gets the PlayerCombat script to apply damage.
         PlayerCombat player = playerCollider.GetComponent<PlayerCombat>();
 
-        // Check if the player exists and is NOT dead
+        // Checks if the player exists and is not dead.
         if (player != null && !player.IsDead())  
         {
+            // Starts the attack animation and logic.
             StartCoroutine(Attack());
-            nextAttackTime = Time.time + attackCooldown;
+            nextAttackTime = Time.time + attackCooldown; // Sets the next time the enemy is allowed to attack.
         }
     }
 }
 
+    // Coroutine that handles the actual attack animation and damage logic.
     private IEnumerator Attack()
     {
         animator.SetTrigger("Attack");
 
-        yield return new WaitForSeconds(0.75f); // Wait until the attack animation is done
+        yield return new WaitForSeconds(0.75f); // Wait until the attack animation is done.
 
+        // Re-checks if the player is still within attack range at the moment of impact.
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
         if (player)
         {
             PlayerCombat playerCombat = player.GetComponent<PlayerCombat>();
 
-            // Only apply damage if the player is not blocking
+            // Only apply damage if the player exists, is alive and not blocking.
             if (playerCombat != null && !playerCombat.IsDead() && !playerCombat.isBlocking)  
             {
-                playerCombat.TakeDamage(attackDamage);
+                playerCombat.TakeDamage(attackDamage); // Deals damage.
             }
             else
             {
@@ -109,12 +137,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Coroutine that handles the cooldown after the enemy takes damage
+    // Coroutine that handles the cooldown after the enemy takes damage.
     private IEnumerator HandleDamageCooldown()
     {
-        canAttack = false; // Prevent attack
-        yield return new WaitForSeconds(takeDamageCooldown); // Wait for cooldown period
-        canAttack = true; // Enable attack again
+        canAttack = false; // Prevents attack.
+        yield return new WaitForSeconds(takeDamageCooldown); // Waits for the cooldown period.
+        canAttack = true; // Enable the attack again.
     }
     
     // Resets the hurt animation state.

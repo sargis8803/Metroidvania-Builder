@@ -107,41 +107,45 @@ public class PlayerCombat : MonoBehaviour
 
     void RangedAttack()
     {
+        // Checks if the projectile prefab and fire point are properly assigned.
         if (projectilePrefab == null || firePoint == null)
         {
             Debug.LogError("Projectile prefab or fire point not assigned!");
             return;
         }
 
+        // Instantiates a new projectile at the fire point's position and rotation.
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         
         // Determine shooting direction based on where the player is facing.
         float direction = transform.localScale.x > 0 ? 1f : -1f;
 
-        rb.linearVelocity = new Vector2(direction * projectileSpeed, 0f);
+        rb.linearVelocity = new Vector2(direction * projectileSpeed, 0f); // Adds velocity to the projectile.
 
 
-        currentAmmo--; // Reduce ammo count
+        currentAmmo--; // Reduce ammo count.
         Debug.Log("Ranged attack fired! Ammo left: " + currentAmmo);
     }
 
     public void RefillAmmo(int amount)
     {
+        // Adds ammo but doesnt exceed maxAmmo limit.
         currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
         Debug.Log("Ammo refilled! Current ammo: " + currentAmmo);
     }
 
     void PerformComboAttack()
     {
+        // Calculates time since the last attack was performed.
         float timeSinceLastAttack = Time.time - lastAttackTime;
 
         if (timeSinceLastAttack > comboResetTime)
         {
-            comboStep = 0; // Reset combo if time between attacks is too long
+            comboStep = 0; // Reset combo if time between attacks is too long.
         }
 
-        comboStep++; // Move to next combo step
+        comboStep++; // Move to next combo step.
 
         if (comboStep == 1)
         {
@@ -152,7 +156,7 @@ public class PlayerCombat : MonoBehaviour
             animator.SetTrigger("Attack2");
         }
 
-        lastAttackTime = Time.time; // Update last attack time
+        lastAttackTime = Time.time; // Update last attack time.
     }
 
     // Function to handle attacking mechanics.
