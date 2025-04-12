@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System;
 
 public class EquipSlot : MonoBehaviour, IPointerClickHandler
 {
@@ -15,7 +16,6 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
 
     private bool isFull = false;
 
-
     [SerializeField] public GameObject selectedShader;
     public bool isSelected;
 
@@ -26,6 +26,8 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
     private GearManager gearManager;
     private EquipmentScriptablesLibrary equipmentLibrary;
     private PlayerMovement playerMovement;
+
+    [SerializeField] private Sprite emptySprite;
     private void Start()
     {
         gearManager = GameObject.Find("GearCanvas").GetComponent<GearManager>();
@@ -55,12 +57,6 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
                 equipmentLibrary.equipmentscriptable[i].EquipItem();
             }
         }
-        /*
-        if (itemName == "Blaster")
-        {
-            PlayerMovement.maxJumps += 1;
-        }
-        */
 
         playerMovement.UpdateJumpCount();
 
@@ -114,7 +110,7 @@ public class EquipSlot : MonoBehaviour, IPointerClickHandler
 
 
         this.itemSprite = null;
-        slotImage.sprite = null;
+        slotImage.sprite = emptySprite;
         slotName.enabled = true;
 
         for (int i = 0; i < equipmentLibrary.equipmentscriptable.Length; i++)
