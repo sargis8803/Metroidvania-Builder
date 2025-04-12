@@ -237,6 +237,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 678834118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &139852239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139852241}
+  - component: {fileID: 139852240}
+  m_Layer: 0
+  m_Name: StatManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &139852240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139852239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ae87f7d3afa742af2b14c39cdb697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAtkDamage: 20
+  playerAtkRange: 0.5
+  playerMaxHealth: 100
+  playerWalkSpeed: 5
+  playerRunSpeed: 7
+  playerJumpForce: 7
+  playerMaxJumps: 2
+--- !u!4 &139852241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139852239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8362207, y: 1.7982748, z: 0.6355936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,12 +668,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 678834121}
   attackPoint: {fileID: 1811915575}
-  attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  attackDamage: 20
-  maxHealth: 100
   comboResetTime: 0.5
   projectilePrefab: {fileID: 166310846796596290, guid: 545b44a01e5f0354fad6dc62a1c8513a, type: 3}
   firePoint: {fileID: 111247389}
@@ -644,10 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e787bc9e6a1d542900a5c88ba4e1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 7
-  jumpForce: 7
-  maxJumps: 2
 --- !u!95 &678834121
 Animator:
   serializedVersion: 7
@@ -1024,7 +1068,7 @@ GameObject:
   - component: {fileID: 1921524332}
   - component: {fileID: 1921524331}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,3 +1153,4 @@ SceneRoots:
   - {fileID: 1401741084}
   - {fileID: 106888233}
   - {fileID: 1921524332}
+  - {fileID: 139852241}
