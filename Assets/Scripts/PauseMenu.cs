@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     public void Buildmenu()
     {
         SceneManager.LoadScene("Build-Menu");
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
      void Update()
