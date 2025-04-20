@@ -95,11 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20505980f6b30264cbf0bb2e6612fd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Blaster
   sprite: {fileID: 7392569859222569844, guid: 7f010d400610fe84eacf4e6f9fafaf47, type: 3}
-  itemDescription: 
+  itemDescription: sdflgnbisdnfgjkkfdg
   gearManager: {fileID: 0}
-  gearType: 0
+  gearType: 2
   tipBox: {fileID: 0}
 --- !u!114 &8716124526759971170
 MonoBehaviour:
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
