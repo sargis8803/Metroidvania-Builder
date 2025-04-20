@@ -194,6 +194,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22111340}
   m_CullTransparentMesh: 1
+--- !u!1001 &28554240
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1617435633427925627, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135703143618198433, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: 2135703143618198433, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: gearType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135703143618198433, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: itemName
+      value: BodyArmor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135703143618198433, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: itemDescription
+      value: Moderately increases max health, slighty decreases speed and jump force.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581793996699391938, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_Name
+      value: BodyArmor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348485089146142631, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
 --- !u!114 &59969951 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4248796102370013890, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
@@ -1108,6 +1185,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183982688}
   m_CullTransparentMesh: 1
+--- !u!1001 &201085869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8614452515969155199, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: -8614452515969155199, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: gearType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8614452515969155199, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: itemName
+      value: SwiftBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: -8614452515969155199, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: itemDescription
+      value: Considerably increases speed at the cost of some health.
+      objectReference: {fileID: 0}
+    - target: {fileID: -4882701407331928354, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930055242590490886, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_Name
+      value: SwiftBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4199996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.260002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908736600353749347, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b70e283862c97142b24593e2e489948, type: 3}
 --- !u!1 &203419316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1367,30 @@ MonoBehaviour:
     - m_Text: Blaster
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: BodyArmor
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: BowlHelm
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Cannon
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: FulllHelm
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: HalfHelm
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Rifle
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: RocketBoots
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: SwiftBoots
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1285,6 +1463,14 @@ MonoBehaviour:
   - {fileID: 5517744372065055177, guid: 08259608fa14604438d5422500977e76, type: 3}
   - {fileID: 2976483198402084082, guid: 667dc10c32151934eb5fd708c920b581, type: 3}
   - {fileID: 2095315513}
+  - {fileID: 2070339678}
+  - {fileID: 990870904}
+  - {fileID: 1248363556}
+  - {fileID: 585560667}
+  - {fileID: 1890980852}
+  - {fileID: 1541754471}
+  - {fileID: 1963179175}
+  - {fileID: 350805316}
   dropdown: {fileID: 203419318}
 --- !u!1001 &205031062
 PrefabInstance:
@@ -1695,6 +1881,11 @@ MonoBehaviour:
   itemDescriptionText: {fileID: 936434076}
   itemDescriptionName: {fileID: 1226115115}
   emptySprite: {fileID: 7308237668044026859, guid: d266dd48f8b3e0746b9d7fc1260e7803, type: 3}
+--- !u!1 &350805316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930055242590490886, guid: 7b70e283862c97142b24593e2e489948, type: 3}
+  m_PrefabInstance: {fileID: 201085869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &353801012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2635,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &585560667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2367663074586054480, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+  m_PrefabInstance: {fileID: 1392923031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &610259658 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4248796102370013890, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
@@ -2841,6 +3037,83 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &645227017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3153849350682380285, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099655894803326985, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762739397427265114, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: 8762739397427265114, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: gearType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762739397427265114, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: itemName
+      value: RocketBoots
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762739397427265114, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: itemDescription
+      value: Considerably increases jump height and number of jumps
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046104996057251948, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+      propertyPath: m_Name
+      value: RocketBoots
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
 --- !u!1 &647664197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4895,11 +5168,92 @@ PrefabInstance:
       propertyPath: tipBox
       value: 
       objectReference: {fileID: 1490985198}
+    - target: {fileID: 8034482421200258643, guid: afdd0a372c5adc94aa30e076804c203e, type: 3}
+      propertyPath: itemDescription
+      value: Slightly increases damage, slightly decreases range.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdd0a372c5adc94aa30e076804c203e, type: 3}
+--- !u!1001 &973999168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8770493299561124575, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: -8770493299561124575, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: gearType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8770493299561124575, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: itemName
+      value: HalfHelm
+      objectReference: {fileID: 0}
+    - target: {fileID: -8770493299561124575, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: itemDescription
+      value: Slightly increases max health.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796672863562876021, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502732247866749140, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_Name
+      value: HalfHelm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427547388523092145, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6cc53be784d768468baec997bdfff51, type: 3}
 --- !u!1 &976921043
 GameObject:
   m_ObjectHideFlags: 0
@@ -5095,6 +5449,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988287903}
   m_CullTransparentMesh: 1
+--- !u!1 &990870904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2100804750282841836, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+  m_PrefabInstance: {fileID: 1590605521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1036634171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6351,6 +6710,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226115113}
   m_CullTransparentMesh: 1
+--- !u!1 &1248363556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2335433342455790811, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+  m_PrefabInstance: {fileID: 1592661204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1257936547
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,6 +7534,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 207.07}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1001 &1392923031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -535841404875826518, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367663074586054480, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_Name
+      value: FullHelm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257892028893456181, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180630933223257309, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: 7180630933223257309, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: gearType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180630933223257309, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: itemName
+      value: FullHelm
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180630933223257309, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
+      propertyPath: itemDescription
+      value: Moderately increases max health, slighty decreases speed and jump force.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a55c9b21c76a6cf4a9876f91456081c6, type: 3}
 --- !u!1 &1403303512
 GameObject:
   m_ObjectHideFlags: 0
@@ -7844,6 +8285,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490985198}
   m_CullTransparentMesh: 1
+--- !u!1 &1541754471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8438787488403710145, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+  m_PrefabInstance: {fileID: 1882067393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1548751304 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4248796102370013890, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
@@ -7860,6 +8306,83 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3179199221722828622, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
   m_PrefabInstance: {fileID: 1054574356}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1590605521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2609779845592048582, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658212642060547463, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: 658212642060547463, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: gearType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658212642060547463, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: itemName
+      value: BowlHelm
+      objectReference: {fileID: 0}
+    - target: {fileID: 658212642060547463, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: itemDescription
+      value: Slightly decreaes max health, considerably increases jump force.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209907292376954505, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100804750282841836, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
+      propertyPath: m_Name
+      value: BowlHelm
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50b780348bd776e4fb71eb6b1bf1d872, type: 3}
 --- !u!1 &1591861988
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,6 +8519,83 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &1592661204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6365332974112084237, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: -6365332974112084237, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: gearType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6365332974112084237, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: itemName
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: -6365332974112084237, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: itemDescription
+      value: Considerably increases damage at the cost of mobility.
+      objectReference: {fileID: 0}
+    - target: {fileID: -2588174935635029351, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335433342455790811, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_Name
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279987014512514238, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9b6bedb8ed887547949a5c502ba4da6, type: 3}
 --- !u!1001 &1621476596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9611,6 +10211,88 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
+--- !u!1001 &1882067393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2713111643191295964, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -742445973812061946, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: tipBox
+      value: 
+      objectReference: {fileID: 1490985198}
+    - target: {fileID: -742445973812061946, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: gearType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -742445973812061946, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: itemName
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: -742445973812061946, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: itemDescription
+      value: Moderately increases damage and range, slightly reduces speed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438787488403710145, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_Name
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -40.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714854561964607652, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03fb08da70c91ff4f97bbadb8c9c5e22, type: 3}
+--- !u!1 &1890980852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3502732247866749140, guid: e6cc53be784d768468baec997bdfff51, type: 3}
+  m_PrefabInstance: {fileID: 973999168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1894541194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9643,7 +10325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5084, y: 1.2599}
+  m_AnchoredPosition: {x: 2.04, y: -2.2}
   m_SizeDelta: {x: 1.7552, y: 1.4667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1898625856
@@ -10236,6 +10918,11 @@ MonoBehaviour:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3179199221722828622, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
   m_PrefabInstance: {fileID: 958620245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963179175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9046104996057251948, guid: 4e3f9bb818f8baf4da4716347aafb01d, type: 3}
+  m_PrefabInstance: {fileID: 645227017}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1971187476
 GameObject:
@@ -11002,6 +11689,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 663cd52a6f744f043861cd72befa901e, type: 3}
+--- !u!1 &2070339678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3581793996699391938, guid: a293d83d9676af54285c3a84a0571c9d, type: 3}
+  m_PrefabInstance: {fileID: 28554240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095315513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6216614680675411738, guid: afdd0a372c5adc94aa30e076804c203e, type: 3}
@@ -11201,6 +11893,14 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1894541195}
   - {fileID: 973283154}
+  - {fileID: 28554240}
+  - {fileID: 1590605521}
+  - {fileID: 1592661204}
+  - {fileID: 1392923031}
+  - {fileID: 973999168}
+  - {fileID: 1882067393}
+  - {fileID: 645227017}
+  - {fileID: 201085869}
   - {fileID: 976921047}
   - {fileID: 60622445}
   - {fileID: 1898625862}
