@@ -17,5 +17,5 @@ MonoBehaviour:
   playerMaxHealth: 0
   playerMaxJumps: 0
   playerAtkRange: -0.1
-  playerSpeed: 0
+  playerSpeed: 1
   playerJumpForce: 0

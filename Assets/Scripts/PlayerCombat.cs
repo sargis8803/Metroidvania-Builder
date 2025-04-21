@@ -71,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
             PerformComboAttack();
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             if (Time.time >= lastRangedAttackTime + rangedCooldown && currentAmmo > 0)
             {

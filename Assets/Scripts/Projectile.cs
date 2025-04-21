@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    // Reference Player stats to get changeable attributes
+    private PlayerStats playerStats;
+
     // Amount of damage the projectile deals.
     public int damage = 10;
 
@@ -12,6 +15,10 @@ public class Projectile : MonoBehaviour
     {
         // Destroy the projectile after 'lifetime' seconds to prevent it from persisting in the scene.
         Destroy(gameObject, lifetime);
+
+        // Get the PlayerStats component attached to the same GameObject
+        playerStats = GameObject.Find("StatManager").GetComponent<PlayerStats>();
+        damage = playerStats.playerAtkDamage;
     }
 
     void OnTriggerEnter2D(Collider2D other)
