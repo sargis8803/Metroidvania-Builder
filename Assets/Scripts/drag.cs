@@ -5,13 +5,13 @@ public class Drag : MonoBehaviour
     private Vector2 difference = Vector2.zero;//to maintain mouse to prefab positioning
     private float scaleRate = 0.1f;
     private Color originalColor;
-    private Renderer objectRenderer;
+    private SpriteRenderer objectRenderer;
     private Color[] colors = { Color.red, Color.blue, Color.green };
     private int currentColor = -1;
 
     private void Start()
     {
-        objectRenderer = GetComponent<Renderer>();
+        objectRenderer = GetComponent<SpriteRenderer>();
         originalColor = objectRenderer.material.color;
     }
 
@@ -55,7 +55,7 @@ public class Drag : MonoBehaviour
     {
         if (objectRenderer == null)
         {
-            objectRenderer = GetComponent<Renderer>();
+            objectRenderer = GetComponent<SpriteRenderer>();
         }
 
         if (objectRenderer != null)

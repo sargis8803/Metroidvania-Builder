@@ -10,7 +10,6 @@ TagManager:
   - tPlat
   - platform
   - Square
-
   layers:
   - Default
   - TransparentFX
@@ -18,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
   - Enemy
-  - Projectile
+  - Player
+  - 
   - 
   - 
   - 

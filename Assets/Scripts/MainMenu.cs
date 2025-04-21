@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
     //Opens Level Select Screen
     public void OpenLevels()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
 
     //Ends Application

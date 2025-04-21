@@ -11,6 +11,13 @@ public class BuildMenu : MonoBehaviour
     private bool undoFlag;
     private bool redoFlag;
 
+    [SerializeField] public GameObject buildPanel;
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
+
     public void Awake()
     {
         if (dropdown != null)
@@ -23,7 +30,9 @@ public class BuildMenu : MonoBehaviour
 
     public void Exit()//does not save, add functionality to prompt user to save build pregross before exiting
     {
-        SceneManager.LoadScene("Level-Playing");
+        //SceneManager.LoadScene("Level-Playing");
+        bool isBuildPanelOpen = buildPanel.activeSelf;
+        buildPanel.SetActive(!isBuildPanelOpen);
         Time.timeScale = 1;
     }
 
