@@ -4459,7 +4459,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916491984}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &916491988
 Camera:
   m_ObjectHideFlags: 0
@@ -9411,7 +9411,7 @@ MonoBehaviour:
   attackPoint: {fileID: 353801013}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   comboResetTime: 0.5
   projectilePrefab: {fileID: 166310846796596290, guid: 545b44a01e5f0354fad6dc62a1c8513a, type: 3}
   firePoint: {fileID: 760603354}
@@ -10393,7 +10393,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1911012009}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!50 &1898625859
 Rigidbody2D:
   serializedVersion: 5
